@@ -2,23 +2,35 @@
 <html>
     <head>
         <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
         <title>Polyglot Translator</title>
     </head>
     <body>
         <div class="container">
-            <img src="assets/logo.png" alt="Polyglot Logo" class="logo">
-            <h1>Polyglot Translator</h1>
+            <div class="header">
+                <img src="assets/logo.png" alt="Polyglot Logo" class="logo">
+                <h1>Polyglot Translator</h1>
+            </div>
             <div class="translation-box">
-                <textarea id="input-text" placeholder="Enter text in English..."></textarea>
-                <div class="select-wrapper">
-                    <select id="target-language">
-                        <option value="French" data-flag="assets/fr-flag.png">French</option>
-                        <option value="Japanese" data-flag="assets/jp-flag.png">Japanese</option>
-                        <option value="Spanish" data-flag="assets/es-flag.png">Spanish</option>
-                    </select>
-                    <img id="selected-flag" src="assets/fr-flag.png" alt="Selected language flag" class="flag-icon">
+                <div class="input-section">
+                    <textarea id="input-text" placeholder="Enter text in English..."></textarea>
+                    <div class="controls">
+                        <div class="select-wrapper">
+                            <select id="target-language">
+                                <option value="French" data-flag="assets/fr-flag.png">French</option>
+                                <option value="Japanese" data-flag="assets/jp-flag.png">Japanese</option>
+                                <option value="Spanish" data-flag="assets/es-flag.png">Spanish</option>
+                            </select>
+                            <img id="selected-flag" src="assets/fr-flag.png" alt="Selected language flag" class="flag-icon">
+                        </div>
+                        <button id="translate-btn">
+                            <svg class="translate-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M12.87 15.07l-2.54-2.51.03-.03A17.52 17.52 0 0014.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/>
+                            </svg>
+                            Translate
+                        </button>
+                    </div>
                 </div>
-                <button id="translate-btn">Translate</button>
             </div>
             <div id="result" class="result-box"></div>
         </div>
