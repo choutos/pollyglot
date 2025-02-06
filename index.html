@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <title>Polyglot Translator</title>
+    </head>
+    <body>
+        <div class="container">
+            <img src="assets/logo.png" alt="Polyglot Logo" class="logo">
+            <h1>Polyglot Translator</h1>
+            <div class="translation-box">
+                <textarea id="input-text" placeholder="Enter text in English..."></textarea>
+                <div class="select-wrapper">
+                    <select id="target-language">
+                        <option value="French" data-flag="assets/fr-flag.png">French</option>
+                        <option value="Japanese" data-flag="assets/jp-flag.png">Japanese</option>
+                        <option value="Spanish" data-flag="assets/es-flag.png">Spanish</option>
+                    </select>
+                    <img id="selected-flag" src="assets/fr-flag.png" alt="Selected language flag" class="flag-icon">
+                </div>
+                <button id="translate-btn">Translate</button>
+            </div>
+            <div id="result" class="result-box"></div>
+        </div>
+        <script src="index.js" type="module"></script>
+    </body>
+</html>
